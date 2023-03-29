@@ -1,19 +1,19 @@
 import * as React from 'react';
-import {CssBaseline, ThemeProvider,} from '@mui/material';
 import {MuiNavbar} from './components/Navbar/MuiNavbar';
-import {theme} from './components/Theme/MuiTheme';
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <MuiNavbar/>
-    <ItemListContainer contenido="TECLADOS"/>
-    <ItemListContainer contenido="MOUSEPADS"/>
-    <ItemListContainer contenido="MOUSES"/>
-    </ThemeProvider>
+  <BrowserRouter>
+    <MuiNavbar/>
+    <Routes>
+      <Route path='/' element={<ItemListContainer/>}/>
+      <Route path='/category/:id' element={<ItemListContainer/>}/>
+      <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
