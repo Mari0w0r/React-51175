@@ -4,8 +4,6 @@ Este es un proyecto de ecommerce que se enfoca en productos tecnológicos para g
 
 ## Librerías
 
-In the project directory, you can run:
-
 ### `MaterialUI`
 
 Para la creación de este proyecto se utilizó la librería de MUI, la cual ofrece una gran cantidad de componentes de organización y estilos, lo que permitió configurar los estilos de la página de manera rápida y concisa dentro del mismo componente. Además, se evitó la creación de demasiados archivos .css.
